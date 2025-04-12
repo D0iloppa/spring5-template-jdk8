@@ -4,26 +4,27 @@
         <Console name="ConsoleAppender" target="SYSTEM_OUT">
             <PatternLayout pattern="[%d{HH:mm:ss}] [%-5level] %c - %msg%n" />
         </Console>
+        <RollingFile name="RollingFileAppender"
+                     fileName="logs/app.log"
+                     filePattern="logs/archive/app-%d{yyyy-MM-dd}-%i.log.gz">
+            <PatternLayout pattern="[%d{HH:mm:ss}] [%-5level] %c - %msg%n" />
+            <Policies>
+                <SizeBasedTriggeringPolicy size="100MB" />
+            </Policies>
+            <DefaultRolloverStrategy max="1000">
+                <Delete basePath="logs/archive" maxDepth="1">
+                    <IfFileName glob="app-*.log.gz" />
+                    <IfLastModified age="30d" />
+                </Delete>
+            </DefaultRolloverStrategy>
+        </RollingFile>
     </Appenders>
 
     <Loggers>
-        <Root level="info">
+
+        <Root level="warn">
             <AppenderRef ref="ConsoleAppender" />
+            <AppenderRef ref="RollingFileAppender" /> <!-- ✅ 필수 -->
         </Root>
-        
-        <Logger name="org.apache.ibatis.io.VFS" level="warn" additivity="false">
-		    <AppenderRef ref="Console"/>
-		</Logger>
-		
-        
-        <!-- 필요한 경우 개별 Logger 설정 -->
-        <!--
-        <Logger name="com.d0iloppa" level="debug" additivity="false">
-            <AppenderRef ref="ConsoleAppender" />
-        </Logger>
-        -->
-        
     </Loggers>
-    
-    
 </Configuration>

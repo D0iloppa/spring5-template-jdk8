@@ -27,7 +27,7 @@ public class AppConfig {
 	
 	@PostConstruct
 	public void init() {
-	    log.info("✅ DB URL: {}", env.getProperty("db.url"));
+	    // log.info("✅ DB URL: {}", env.getProperty("db.url"));
 	}
 	
 
