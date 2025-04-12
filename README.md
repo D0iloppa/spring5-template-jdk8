@@ -19,6 +19,24 @@
 
 ---
 
+## 📁 디렉토리 구조 (요약)
+```
+src/
+├── main/
+│   ├── java/                 # Controller, Service, DAO, VO
+│   ├── resources/
+│   │   ├── config/           # app.properties, app-dev.properties
+│   │   ├── mapper/           # MyBatis Mapper XML
+│   │   └── spring-conf/      # spring-servlet.xml, root-context.xml
+│   └── webapp/
+│       ├── static/           # JS / CSS / 이미지 등 정적 리소스
+│       │   └── vendor/       # 외부 라이브러리(jQuery, Swal 등)
+│       └── WEB-INF/
+│           ├── jsp/          # JSP Views
+│           └── web.xml       # DispatcherServlet 설정
+```
+
+
 
 ## 📦 포함된 기본 프론트엔드 라이브러리
 
@@ -48,10 +66,12 @@
 
 3. 톰캣 연동 후 실행
 
-4. 다음 주소로 접속:
+4. 다음 주소로 접속: (tomcat port : `8080`, webapp : `ROOT.war` 기준)
     ```
     http://localhost:8080/
     ```
+    → 기본 인트로 페이지(index.jsp)가 출력.
+    → 이후 sample 페이지는 `/home/home.do` 경로에서 확인 가능.
 
 ---
 
@@ -65,6 +85,7 @@
 
 
 ---
+
 
 
 
