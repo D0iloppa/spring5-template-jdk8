@@ -10,6 +10,19 @@
 - INTERCEPTOR : SessionInterceptor
 - Redis (Optional)
 
+## 🧱 구성 요소 예시 포함
+
+다음 구성은 템플릿에 기본 포함되어 있으며, 필요에 따라 확장 가능합니다:
+
+| 구성 | 설명 |
+|------|------|
+| `CORSFilter.java` | CORS 허용 도메인/메서드/헤더 설정용 보안 필터 |
+| `XSSFilter.java`, `XSSRequestWrapper.java` | 입력값에 대한 XSS 방지 필터 |
+| `SessionInterceptor.java` | 로그인 세션 유효성 체크 인터셉터 |
+| `AppConfig.java` | app.properties 설정 접근 유틸 클래스 (@Value + Env 병행 지원) |
+
+📌 모든 Filter는 `web.xml`, Interceptor는 `spring-servlet.xml`에 기본 등록되어 있습니다.
+
 ## 🛠️ 환경
 
 - Java 1.8
@@ -26,7 +39,7 @@ src/
 │   ├── java/                 # Controller, Service, DAO, VO
 │   ├── resources/
 │   │   ├── config/           # app.properties, app-dev.properties
-│   │   ├── mapper/           # MyBatis Mapper XML
+│   │   ├── mapper/           # MyBatis SQL Mapper XMLs
 │   │   └── spring-conf/      # spring-servlet.xml, root-context.xml
 │   └── webapp/
 │       ├── static/           # JS / CSS / 이미지 등 정적 리소스
