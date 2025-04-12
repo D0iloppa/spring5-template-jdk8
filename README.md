@@ -18,7 +18,7 @@
 |------|------|
 | `CORSFilter.java` | CORS 허용 도메인/메서드/헤더 설정용 보안 필터 |
 | `XSSFilter.java`, `XSSRequestWrapper.java` | 입력값에 대한 XSS 방지 필터 |
-| `SessionInterceptor.java` | 로그인 세션 유효성 체크 인터셉터 |
+| `SessionInterceptor.java` | 세션 유효성 체크 인터셉터 |
 | `AppConfig.java` | app.properties 설정 접근 유틸 클래스 (@Value + Env 병행 지원) |
 
 📌 모든 Filter는 `web.xml`, Interceptor는 `spring-servlet.xml`에 기본 등록되어 있습니다.

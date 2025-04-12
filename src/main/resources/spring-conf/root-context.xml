@@ -10,25 +10,33 @@
            http://www.springframework.org/schema/context/spring-context.xsd
            http://www.springframework.org/schema/tx 
            http://www.springframework.org/schema/tx/spring-tx.xsd">
-
-    <!-- 🌐 외부 설정파일(app.properties) 로딩 -->
-    <context:property-placeholder location="classpath:config/app.properties" />
+           
+           
+           
+ 	<!-- 🌐 외부 설정파일(app.properties) 로딩 -->
+    <context:property-placeholder location="classpath*:config/app.properties" />
+    
 
     <!-- 📦 공통 Bean Component Scan -->
     <context:component-scan base-package="com.d0iloppa.spring5.template.config" />
-
-    <!-- 💾 DB Connection Pool -->
-    <bean id="dataSource" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-        <property name="driverClassName" value="${db.driver}" />
-        <property name="url" value="${db.url}" />
-        <property name="username" value="${db.username}" />
-        <property name="password" value="${db.password}" />
-    </bean>
+    
+    <!-- 💾 DB Connection Pool (HikariCP) -->
+    <bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource" destroy-method="close">
+	    <property name="driverClassName" value="${db.driver}" />
+	    <property name="jdbcUrl" value="${db.url}" />
+	    <property name="username" value="${db.username}" />
+	    <property name="password" value="${db.password}" />
+	    
+	    <!-- 옵션 (필요 시) -->
+	    <property name="connectionTimeout" value="500" />
+	    <property name="maximumPoolSize" value="10" />
+	    <property name="minimumIdle" value="2" />
+	</bean>
 
     <!-- ⚙️ MyBatis -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <property name="dataSource" ref="dataSource" />
-        <property name="configLocation" value="classpath:mybatis-config.xml" />
+        <property name="configLocation" value="classpath:mybatis-conf/mybatis-config.xml" />
         <property name="mapperLocations" value="classpath:mapper/**/*.xml" />
     </bean>
 
@@ -36,11 +44,11 @@
         <constructor-arg ref="sqlSessionFactory" />
     </bean>
 
-    <!-- (선택) 트랜잭션 매니저 -->
+    <!-- 트랜잭션 매니저 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
-
+    
     <tx:annotation-driven transaction-manager="transactionManager"/>
 
 </beans>

@@ -25,16 +25,12 @@
     </filter-mapping>
     
     
-    <!-- 🌱 Root ApplicationContext 설정 -->
-	<context-param>
-	    <param-name>contextConfigLocation</param-name>
-	    <param-value>classpath:spring-conf/root-context.xml</param-value>
-	</context-param>
+
     
 
     <!-- 🚪 Spring DispatcherServlet -->
     <servlet>
-        <servlet-name>spring</servlet-name>
+        <servlet-name>spring-dispatcher</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
@@ -42,9 +38,22 @@
         </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+    
+    
+    <!-- 🌱 Root ApplicationContext 설정 -->
+	<context-param>
+	    <param-name>contextConfigLocation</param-name>
+	    <param-value>classpath:spring-conf/root-context.xml</param-value>
+	</context-param>
+	
+      <listener>
+    	<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  	 </listener>
+  	
+	
 
     <servlet-mapping>
-        <servlet-name>spring</servlet-name>
+        <servlet-name>spring-dispatcher</servlet-name>
         <url-pattern>/</url-pattern>
     </servlet-mapping>
 

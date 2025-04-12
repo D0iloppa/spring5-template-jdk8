@@ -50,10 +50,7 @@ public class HomeController {
     	String _ct = appConfig.get("config.test", "NONE DATA");
     	
     	String testMsg = String.format("config 비교 : (전역변수)%s : (스코프변수)%s", configTest, _ct);
-    	String now = homeService.getCurrentTime();
-    	if(now==null) now = "-";
     	
-        mv.addObject("now", now);
         mv.addObject("msg", testMsg);
         
         return mv;
@@ -80,6 +77,19 @@ public class HomeController {
 
         result.put("data", sampleList);
         result.put("success", true);
+    	
+    	return result;
+    }
+    
+    
+    @RequestMapping("/now")
+    @ResponseBody
+    public Map<String, Object> now(HomeVO homeVO){
+    	Map<String, Object> result = new HashMap<>();
+    
+    	String now = homeService.getCurrentTime();
+
+        result.put("now", now);
     	
     	return result;
     }

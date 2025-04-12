@@ -24,57 +24,75 @@
 
     <dependencies>
 
-        <!-- Spring Web MVC -->
+          <!-- ✅ Spring Core & Web -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
+        
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
 
-        <!-- Servlet API (Tomcat이 제공하므로 provided) -->
+        <!-- ✅ Servlet / JSTL -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>4.0.1</version>
             <scope>provided</scope>
         </dependency>
-
-        <!-- JSTL -->
+        
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>1.2</version>
         </dependency>
 
-        <!-- MyBatis -->
+        <!-- ✅ MyBatis + Spring 연동 -->
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
             <version>3.5.15</version>
         </dependency>
-
-        <!-- MyBatis-Spring 연동 -->
+        
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis-spring</artifactId>
             <version>2.0.7</version>
         </dependency>
-
-        <!-- PostgreSQL JDBC -->
+        
+        <!-- ✅ Spring JDBC (for DataSourceTransactionManager) -->
 		<dependency>
-		    <groupId>org.postgresql</groupId>
-		    <artifactId>postgresql</artifactId>
-		    <version>42.7.3</version>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${spring.version}</version>
 		</dependency>
 
-        <!-- Redis (Optional) -->
+        <!-- ✅ JDBC Driver (PostgreSQL) -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.7.3</version>
+        </dependency>
+
+        <!-- ✅ HikariCP (Java 8 호환 버전) -->
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>3.4.5</version>
+        </dependency>
+
+        <!-- ✅ Redis (Optional) -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>4.4.3</version>
         </dependency>
 
-        <!-- Log4j2 (SLF4J 브리지 포함) -->
+        <!-- ✅ Log4j2 + SLF4J Bridge -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>

@@ -10,11 +10,20 @@
         <Root level="info">
             <AppenderRef ref="ConsoleAppender" />
         </Root>
+        
+        <Logger name="org.apache.ibatis.io.VFS" level="warn" additivity="false">
+		    <AppenderRef ref="Console"/>
+		</Logger>
+		
+        
         <!-- 필요한 경우 개별 Logger 설정 -->
         <!--
         <Logger name="com.d0iloppa" level="debug" additivity="false">
             <AppenderRef ref="ConsoleAppender" />
         </Logger>
         -->
+        
     </Loggers>
+    
+    
 </Configuration>

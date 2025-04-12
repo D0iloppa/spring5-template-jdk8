@@ -18,15 +18,6 @@ public class HomeService {
     private HomeDAO homeDAO;
 	
 	
-	
-
-	/**
-	 * 1. 메소드명 : getCurrentTime
-	 * 2. 작성일: 2025. 4. 12.
-	 * 3. 작성자: doil
-	 * 4. 설명: 
-	 * 5. 수정일: doil
-	 */
 	public String getCurrentTime() {
 		// TODO Auto-generated method stub
 		
