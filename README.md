@@ -65,7 +65,7 @@ src/
 ├── main/
 │   ├── java/                 # Controller, Service, DAO, VO
 │   ├── resources/
-│   │   ├── config/           # app.properties, app-dev.properties
+│   │   ├── config/           # app.properties
 │   │   ├── mapper/           # MyBatis SQL Mapper XMLs
 │   │   └── spring-conf/      # spring-servlet.xml, root-context.xml
 │   └── webapp/
