@@ -1,4 +1,4 @@
-# spring5-template-jdk8 🧱
+# 🐋 spring5-template-jdk8
 
 📌 JDK 1.8 기반, Spring Framework 5.3.34를 사용한 웹 템플릿 프로젝트
 
