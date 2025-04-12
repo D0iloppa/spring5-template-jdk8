@@ -54,3 +54,7 @@ function sampleAPI() {
         }
     });
 }
+
+function swalTest(){
+	Swal.fire('Swal 함수가 올바르게 작동함.');
+}
