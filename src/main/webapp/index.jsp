@@ -75,6 +75,18 @@
 		        <li><code>/resources/log4j2.xml</code> - log4j 환경설정</li>
 		    </ul>
 		</div>
+		
+		<div class="section">
+		    <h2>📦 포함된 기본 JS/CSS 라이브러리</h2>
+		    <ul>
+		        <li><code>jQuery</code> - v3.7.1</li>
+		        <li><code>Tabulator</code> - v6.3.1</li>
+		        <li><code>SweetAlert2</code> - v11.16.1</li>
+		        <li><code>FontAwesome</code> - v6.7.2</li>
+		        <li><code>Ionicons</code> - v7.4.0</li>
+		    </ul>
+		    <p>📁 모든 라이브러리는 <code>static/vendor/</code> 경로에 정리되어 있으며, <code>common.jsp</code>에서 전역 import(OPTIONAL)</p>
+		</div>
 
 	    
 	
