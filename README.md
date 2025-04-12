@@ -1,17 +1,17 @@
 # 🐋 spring5-template-jdk8
 
-📌 JDK 1.8 기반, Spring Framework 5.3.34를 사용한 웹 템플릿 프로젝트
+📌 `JDK 1.8` 기반, `Spring Framework 5.3.34`를 사용한 웹 템플릿 프로젝트
 
 
 
 
 
 ## ✅ 주요 구성
-- Spring MVC 5.3.34
+- Spring Framework : `5.3.34`
 - Maven + WAR Packaging
 - MyBatis + JDBC
-- FILTER : CORSFilter, XSSFilter
-- INTERCEPTOR : SessionInterceptor
+- FILTER : `CORSFilter`, `XSSFilter`
+- INTERCEPTOR : `SessionInterceptor`
 - Redis (Optional)
 
 ## 🧱 구성 요소 예시 포함
@@ -29,7 +29,7 @@
 
 ## 🧾 로그 설정 (Log4j2)
 
-본 템플릿 프로젝트는 Log4j2를 사용하여 콘솔 및 파일 기반 로깅을 지원.
+본 템플릿 프로젝트는 `Log4j2`를 사용하여 콘솔 및 파일 기반 로깅을 지원.
 
 ### 📌 주요 특징
 - **레벨 기준**: 기본 로그 레벨은 `WARN`.
