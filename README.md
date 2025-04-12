@@ -25,7 +25,7 @@
 
 ## 🧾 로그 설정 (Log4j2)
 
-본 프로젝트는 Log4j2를 사용하여 콘솔 및 파일 기반 로깅을 지원.
+본 템플릿 프로젝트는 Log4j2를 사용하여 콘솔 및 파일 기반 로깅을 지원.
 
 ### 📌 주요 특징
 - **레벨 기준**: 기본 로그 레벨은 `WARN`.
@@ -80,11 +80,15 @@ src/
 
 > 모든 정적 리소스는 `/static/vendor/`에 위치하며, `common.jsp`를 통해 전역 import (OPTIONAL)
 
-- jQuery v3.7.1
-- Tabulator v6.3.1
-- SweetAlert2 v11.16.1
-- FontAwesome v6.7.2
-- Ionicons v7.4.0
+| 라이브러리       | 버전      | CDN 링크 |
+|------------------|-----------|----------|
+| **jQuery**       | v3.7.1    | [https://code.jquery.com/jquery-3.7.1.min.js](https://code.jquery.com/jquery-3.7.1.min.js) |
+| **Tabulator**    | v6.3.1    | [JS](https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js) <br> [CSS](https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css) |
+| **SweetAlert2**  | v11.16.1  | [JS](https://cdn.jsdelivr.net/npm/sweetalert2@11.16.1/dist/sweetalert2.min.js) <br> [CSS](https://cdn.jsdelivr.net/npm/sweetalert2@11.16.1/dist/sweetalert2.min.css) |
+| **FontAwesome**  | v6.7.2    | [CSS](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css) |
+| **Ionicons**     | v7.4.0    | [ESM](https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js) <br> [UMD](https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js) |
+
+
 
 > 전체 목록은 [`vendor.packages.md`](./src/main/webapp/static/vendor/vendor.packages.md) 참고
 
