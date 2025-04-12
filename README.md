@@ -2,6 +2,10 @@
 
 📌 JDK 1.8 기반, Spring Framework 5.3.34를 사용한 웹 템플릿 프로젝트
 
+
+
+
+
 ## ✅ 주요 구성
 - Spring MVC 5.3.34
 - Maven + WAR Packaging
