@@ -82,11 +82,11 @@ src/
 
 | 라이브러리       | 버전      | CDN 링크 |
 |------------------|-----------|----------|
-| **jQuery**       | v3.7.1    | [https://code.jquery.com/jquery-3.7.1.min.js](https://code.jquery.com/jquery-3.7.1.min.js) |
-| **Tabulator**    | v6.3.1    | [JS](https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js)  [CSS](https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css) |
-| **SweetAlert2**  | v11.16.1  | [JS](https://cdn.jsdelivr.net/npm/sweetalert2@11.16.1/dist/sweetalert2.min.js)  [CSS](https://cdn.jsdelivr.net/npm/sweetalert2@11.16.1/dist/sweetalert2.min.css) |
+| **jQuery**       | v3.7.1    | [JS](https://code.jquery.com/jquery-3.7.1.min.js) |
+| **Tabulator**    | v6.3.1    | [JS](https://unpkg.com/tabulator-tables@6.3.1/dist/js/tabulator.min.js) , [CSS](https://unpkg.com/tabulator-tables@6.3.1/dist/css/tabulator.min.css) |
+| **SweetAlert2**  | v11.16.1  | [JS](https://cdn.jsdelivr.net/npm/sweetalert2@11.16.1/dist/sweetalert2.min.js) , [CSS](https://cdn.jsdelivr.net/npm/sweetalert2@11.16.1/dist/sweetalert2.min.css) |
 | **FontAwesome**  | v6.7.2    | [CSS](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css) |
-| **Ionicons**     | v7.4.0    | [JS](https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/esm/ionicons.min.js)  [CSS](https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/icon.min.css) |
+| **Ionicons**     | v7.4.0    | [JS](https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/esm/ionicons.min.js) , [CSS] (https://cdn.jsdelivr.net/npm/ionicons@7.4.0/dist/collection/components/icon/icon.min.css) |
 
 
 
