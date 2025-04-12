@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans 
+           http://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/context 
+           http://www.springframework.org/schema/context/spring-context.xsd
+           http://www.springframework.org/schema/mvc 
+           http://www.springframework.org/schema/mvc/spring-mvc.xsd">
+           
+
+    <!-- 📍 Annotation 기반 Controller 동작 활성화 -->
+    <mvc:annotation-driven />
+
+    <!-- 📦 @Component, @Controller 등 자동 스캔 -->
+    <context:component-scan base-package="com.d0iloppa.spring5.template" />
+
+    <!-- 👁️ ViewResolver 설정 (JSP) -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/" />
+        <property name="suffix" value=".jsp" />
+    </bean>
+
+    <!-- 🧱 정적 리소스 경로 예외처리 -->
+    <mvc:resources mapping="/static/**" location="/static/" />
+
+    <!-- (옵션) 🛡️ 인터셉터 설정 예시 -->
+    <mvc:interceptors>
+        <mvc:interceptor>
+        	<!-- 인터셉터 적용 대상 -->
+            <mvc:mapping path="/**" />
+            <!-- 예외경로 -->
+            <mvc:exclude-mapping path="/login" />
+            <bean class="com.d0iloppa.spring5.template.interceptor.SessionInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+</beans>

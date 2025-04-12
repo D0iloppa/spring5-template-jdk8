@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <!-- 공통 로그 설정 -->
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!-- TypeAlias 등록 시 패키지 통째로 -->
+    <typeAliases>
+        <typeAlias alias="hmap" type="java.util.HashMap"/>
+         <!-- VO 클래스 자동 alias 등록 -->
+        <package name="com.d0iloppa.spring5.template.model"/>
+    </typeAliases>
+
+</configuration>
